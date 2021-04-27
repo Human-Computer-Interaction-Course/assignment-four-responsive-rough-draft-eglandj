@@ -358,6 +358,12 @@ h2:hover{
 
 @media screen and (max-width: 1024px) {
 
+    #main_container{
+        grid-template: auto auto auto auto auto / auto auto;
+        padding-bottom: 5%;
+        justify-content:space-around;
+    }
+    
     #grid_container{
         display: grid;
         grid-template: 1fr 5fr 1fr / 1fr 8fr 1fr;
@@ -368,13 +374,17 @@ h2:hover{
     }
 
     #main_container{
-        grid-template: auto auto auto auto auto / auto auto;
-        padding-bottom: 5%;
-        justify-content:space-around;
+        padding-top: 5vh;
     }
-    
+
     #title{
         font-size: 1.4vh;
+    }
+
+    .tags{
+        text-align: center;
+        letter-spacing: 0.2rem;
+        font-size: 2vh;
     }
     
     footer{
@@ -421,6 +431,12 @@ h2:hover{
             '. about contact policies faq . icons';
         justify-content: center;
     }
+
+    footer{
+        align-self: flex-end;
+        height: 10vh;
+        margin-top: none;
+    }
     
     #about_us{
         font-size: 2vh;
@@ -435,6 +451,10 @@ h2:hover{
     
     #faq{
         font-size: 2vh;
+    }
+
+    #icon_container{
+        height: 4vh;
     }
 
     @media screen and (max-width: 360px) {
