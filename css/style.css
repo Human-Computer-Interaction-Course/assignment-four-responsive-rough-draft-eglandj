@@ -457,11 +457,11 @@ h2:hover{
         height: 4vh;
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 650px) {
 
         #grid_container{
             display: grid;
-            grid-template: 15vh 5fr 1fr / 1fr 8fr 1fr;
+            grid-template: 15vh 10fr 2fr / 1fr 8fr 1fr;
             grid-template-areas: 
                 'header header header '
                 '... main ...'
@@ -470,9 +470,7 @@ h2:hover{
 
         #main_container{
             grid-template: auto auto auto auto auto / auto auto;
-            justify-content:space-around;
-            border-radius: 8vh;
-            padding-bottom: 15%;
+            justify-content:space-evenly;
         }
         
         #title{
@@ -568,13 +566,13 @@ h2:hover{
             display: none;
         }
 
-        .sports_icons{
+        .sports_container{
+            padding-bottom: 8vh;
             height: 10vh;
-            width: 15vh;
+            width: 14vh;
             justify-self: center;
             align-self: auto;
         }
-
         
         #footer_container{
             display: grid;
