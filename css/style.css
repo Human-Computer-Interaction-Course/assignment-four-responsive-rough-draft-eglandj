@@ -88,84 +88,59 @@ h2:hover{
     letter-spacing: 0.4rem;
 }
 
-.sports_icons{
+.sports_container{
     height: 60%;
     width: 55%;
     justify-self: center;
     align-self: auto;
 }
-
-#baseball{
-    grid-area: baseball;
+.sports_icons{
     border: 1px solid #FFB001;
     border-radius: 60px;
     height: 100%;
     width: 100%;
 }
-#baseball:hover{ opacity: 85%; }
+
+.sports_icons:hover{
+    border-width: 2px;
+    opacity: 35%;
+}
+
+#baseball{
+    grid-area: baseball;
+    
+}
 
 #basketball{
     grid-area: basketball;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #football{
     grid-area: football;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #golf{
     grid-area: golf;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #gymnastics{
     grid-area: gym;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #hockey{
     grid-area: hockey;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #lacrosse{
     grid-area: lacrosse;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #soccer{
     grid-area: soccer;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 #volleyball{
     grid-area: volleyball;
-    border: 1px solid #FFB001;
-    border-radius: 60px;
-    height: 100%;
-    width: 100%;
 }
 
 /* Grid inside header*/
@@ -381,7 +356,16 @@ h2:hover{
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+
+    #grid_container{
+        display: grid;
+        grid-template: 1fr 5fr 1fr / 1fr 8fr 1fr;
+        grid-template-areas: 
+            'header header header '
+            '... main ...'
+            'footer footer footer';
+    }
 
     #main_container{
         grid-template: auto auto auto auto auto / auto auto;
@@ -451,14 +435,6 @@ h2:hover{
     
     #faq{
         font-size: 2vh;
-    }
-
-    #mobile_login_signup{
-        display: none;
-    }
-
-    #mobile_account{
-        display: none;
     }
 
     @media screen and (max-width: 360px) {
@@ -583,20 +559,24 @@ h2:hover{
         #footer_container{
             display: grid;
             grid-template: 8vh / 3fr 1fr;
-            grid-area: 'login/signup .';
+            grid-template-areas: 'login2  account2';
         }
 
 
         #mobile_login_signup{
-            display: inheritg;
+            display: block;
+            color: lightgray;
+            letter-spacing: 0.2rem;
             height: 100%;
-            grid-area: login/signup;
+            grid-area: login2;
             justify-self: center;
         }
 
         #mobile_account{
             grid-area: account2;
-            display: none;
+            display: block;
+            height: 6vh;
+            align-self: center;
         }
     }
 }
